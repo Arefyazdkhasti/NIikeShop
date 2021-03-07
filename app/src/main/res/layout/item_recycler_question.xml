@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_margin="@dimen/standard_margin_8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/small_margin_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_question_recycler_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/large_margin_10dp"
+            android:layout_marginEnd="@dimen/large_margin_10dp"
+            android:textColor="@color/black"
+            tools:text="چگونگی خرید در برنامه" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_answer_recycler_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_question_recycler_question"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/large_margin_10dp"
+            tools:text=" برای خرید از برنامه ابتدا باید وارد حساب کاربری شویدو سپس عملیات خرید را انجام دهید" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

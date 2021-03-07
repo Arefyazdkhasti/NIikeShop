@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //product recyclerView custom view attrs
+    <declare-styleable name="ProductView">
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ValueSelector">
+        <attr name="value_number" format="string"/>
+    </declare-styleable>
+</resources>

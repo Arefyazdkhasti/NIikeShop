@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">NikeShop</string>
+    <string name="see_all">مشاهده همه</string>
+    <string name="toman">تومان</string>
+    <string name="questions">پرسش های متداول</string>
+
+    <string name="Lorem_Ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="Lorem_Ipsum_farsi">لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</string>
+    <string name="Comments">نظرات کابران</string>
+    <string name="AddComment">ثبت نظر</string>
+    <string name="AddToCard">افزودن به سبد خرید</string>
+    <string name="Toman">تومان</string>
+    <string name="Welcome">خوش آمدید</string>
+    <string name="add_your_account_info">اطلاعات حساب خود را وارد کنید</string>
+    <string name="login">ورود</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">ثبت نام</string>
+    <string name="username">username</string>
+    <string name="buy_detail">جزئیات خرید</string>
+    <string name="all_card_size">مبلغ کل خرید</string>
+    <string name="delivery_cost">هزینه ارسال</string>
+    <string name="final_cart_cost">مبلغ قابل پرداخت</string>
+    <string name="number">تعداد</string>
+    <string name="remove_from_Cart">حذف از سبد خرید</string>
+    <string name="favourites">لیست علاقه مندی ها</string>
+    <string name="logout">خروج از حساب کاربری</string>
+    <string name="empty_cart">سبد خرید شما خالی است</string>
+    <string name="pay">پرداخت</string>
+    <string name="SortBy">مرتب سازی</string>
+    <string name="Comment_title">عنوان </string>
+    <string name="send_comment">ثبت نظر</string>
+    <string name="comment_content">متن </string>
+    <string name="your_comment">نظرات شما</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_comment_from_you">تا کنون نظری ثبت نکرده اید!</string>
+    <string name="no_comment_yet">نا کنون نظری برای این محصول ثبت نشده است</string>
+    <string name="ایمیل">ایمیل</string>
+    <string name="نام_کاربری">نام کاربری</string>
+    <string name="رمز_عبور">رمز عبور</string>
+    <string name="receiverAndPayment">انتخاب تحویل گیرنده و شیوه پرداخت</string>
+    <string name="end_your_shop">نهایی کردن خرید</string>
+    <string name="search">جست و جو</string>
+</resources>

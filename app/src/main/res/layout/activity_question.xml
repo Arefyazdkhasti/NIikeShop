@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_favourite_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:layout_toStartOf="@id/image_back_question_activity"
+                android:gravity="center"
+                android:text="@string/questions"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_font_size_16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_back_question_activity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:src="@drawable/ic_arrow_back" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_activity_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout_favourite_activity"
+        android:visibility="invisible"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_recycler_question" />
+
+    <ProgressBar
+        android:id="@+id/progress_activity_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+</RelativeLayout>

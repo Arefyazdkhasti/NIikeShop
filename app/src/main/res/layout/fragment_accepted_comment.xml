@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AcceptedCommentFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_accepted_comment_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_accepted_comment_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_no_comment_accepted_comment_fragment"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/ic_no_comment"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_no_comment_accepted_comment_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_comment_from_you"
+        android:textSize="@dimen/medium_font_size_16sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_no_comment_accepted_comment_fragment"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

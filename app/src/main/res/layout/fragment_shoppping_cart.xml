@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray1"
+    tools:context=".fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_shop_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_recycler_shop" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_empty_shopping_cart"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/icon_empty_shopping_cart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_empty_shopping_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_empty_shopping_cart"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/empty_cart"
+                    android:textColor="@color/black"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_buy_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin_8dp"
+                android:text="@string/buy_detail"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_buy_detail">
+
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/standard_margin_8dp"
+                    android:layout_marginTop="@dimen/standard_margin_8dp"
+                    android:layout_marginEnd="@dimen/standard_margin_8dp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/small_margin_5dp"
+                        android:text="@string/all_card_size"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_font_size_14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/total_price_shopping_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/small_margin_5dp"
+                        android:textColor="@color/gray500"
+                        tools:text="2,500,000" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/standard_margin_8dp"
+                    android:layout_marginEnd="@dimen/standard_margin_8dp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/layout1"
+                    tools:layout_editor_absoluteX="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/small_margin_5dp"
+                        android:text="@string/delivery_cost"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_font_size_14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/delivery_cost_shopping_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/small_margin_5dp"
+                        android:textColor="@color/black"
+                        tools:text="رایگان" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/standard_margin_8dp"
+                    android:layout_marginEnd="@dimen/standard_margin_8dp"
+                    android:background="@color/gray900"
+                    app:layout_constraintTop_toBottomOf="@id/layout1" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/standard_margin_8dp"
+                    android:layout_marginEnd="@dimen/standard_margin_8dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout2"
+                    tools:layout_editor_absoluteX="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/small_margin_5dp"
+                        android:text="@string/final_cart_cost"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_font_size_14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/final_price_shopping_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/small_margin_5dp"
+                        android:textColor="@color/black"
+                        tools:text="2,500,000" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/standard_margin_8dp"
+                    android:layout_marginEnd="@dimen/standard_margin_8dp"
+                    android:background="@color/gray900"
+                    app:layout_constraintTop_toBottomOf="@id/layout2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar_shop_fragment"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/main_layout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pay_shop_fragment"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_height="60dp"
+        app:cornerRadius="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/standard_margin_8dp"
+        android:text="@string/end_your_shop"
+        android:textSize="@dimen/large_font_size_20sp"
+        />
+
+</RelativeLayout>

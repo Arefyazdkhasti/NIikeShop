@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="small_margin_5dp">5dp</dimen>
+    <dimen name="standard_margin_8dp">8dp</dimen>
+    <dimen name="large_margin_10dp">10dp</dimen>
+    <dimen name="extra_large_margin_16dp">16dp</dimen>
+
+    <dimen name="extra_small_font_size_10sp">10sp</dimen>
+    <dimen name="small_font_size_12sp">12sp</dimen>
+    <dimen name="standard_font_size_14sp">14sp</dimen>
+    <dimen name="medium_font_size_16sp">16sp</dimen>
+    <dimen name="large_font_size_20sp">20sp</dimen>
+    <dimen name="extra_large_font_size_25sp">25sp</dimen>
+
+</resources>

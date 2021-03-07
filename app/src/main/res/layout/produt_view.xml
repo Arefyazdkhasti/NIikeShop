@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp"
+        tools:listitem="@layout/item_product"
+        tools:itemCount="2"/>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_8dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        android:layout_marginTop="@dimen/large_margin_10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/medium_font_size_16sp"
+            tools:text="جدیدترین" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_product_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/see_all"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+</RelativeLayout>

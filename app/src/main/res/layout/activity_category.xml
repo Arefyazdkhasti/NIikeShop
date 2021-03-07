@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.CategoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_category_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_category_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:layout_toStartOf="@id/image_back_category_activity"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_font_size_16sp"
+                tools:text="کفش کوهنوردی" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_back_category_activity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:src="@drawable/ic_arrow_back" />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:layout_margin="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_sort_category_activity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/small_margin_5dp"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                app:srcCompat="@drawable/ic_sort" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin_5dp"
+                android:layout_toStartOf="@id/img_sort_category_activity"
+                android:text="@string/SortBy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_font_size_14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_sort_by_category_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt"
+                android:layout_marginBottom="@dimen/small_margin_5dp"
+                android:layout_toStartOf="@id/img_sort_category_activity"
+                android:text="همه"
+                android:textSize="@dimen/small_font_size_12sp"
+                tools:ignore="SpUsage" />
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_category_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_category_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp" />
+
+    </FrameLayout>
+
+
+    <!--   <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+   -->
+
+    <!-- <LinearLayout
+         android:visibility=""
+         android:id="@+id/root_category_activity"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/banner_image_1_category_fragment"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="@dimen/standard_margin_8dp"
+             android:adjustViewBounds="true"
+             android:scaleType="fitXY"
+             android:src="@drawable/banner1" />
+
+         <com.example.nikeshop.View.CoustomView.ProductView
+             android:id="@+id/new_products_category_fragment"
+             android:layout_width="match_parent"
+             android:layout_height="300dp"
+             app:title="جدیدترین ها"
+             android:layout_marginBottom="@dimen/standard_margin_8dp"/>
+
+         <com.example.nikeshop.View.CoustomView.ProductView
+             android:id="@+id/top_selling_category_fragment"
+             android:layout_width="match_parent"
+             android:layout_height="300dp"
+             app:title="جدیدترین ها" />
+
+             </LinearLayout>-->
+
+
+    <!--</FrameLayout>
+</ScrollView>-->
+</LinearLayout>

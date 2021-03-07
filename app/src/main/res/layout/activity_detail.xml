@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_detail_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:layout_toStartOf="@id/image_back_detail_activity"
+                android:gravity="center"
+                android:maxLines="5"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_font_size_16sp"
+                tools:ignore="RelativeOverlap"
+                tools:text="کفش سالن" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_back_detail_activity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:src="@drawable/ic_arrow" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_favourite_detail_Activity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                app:srcCompat="@drawable/ic_like" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_detail_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_view_detail_Activity"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/appBarLayout_detail"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/product_image_detail_Activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/image5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_name_detail_Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_image_detail_Activity"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/standard_margin_8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_font_size_16sp"
+                tools:text="کفش مخصوص دویدن نایکی Down Shifter" />
+
+            <!--<androidx.appcompat.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_below="@id/product_image_detail_Activity"
+                android:layout_marginTop="@dimen/large_margin_10dp"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                android:rating="4.5"
+                />-->
+
+
+            <com.example.nikeshop.View.CoustomView.CustomTextView
+                android:id="@+id/product_discount_shop_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_name_detail_Activity"
+                android:layout_toEndOf="@+id/toman"
+                android:textSize="@dimen/medium_font_size_16sp"
+                android:visibility="gone"
+                tools:text="2,800,000" />
+
+            <com.example.nikeshop.View.CoustomView.CustomTextView
+                android:id="@+id/toman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_name_detail_Activity"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                android:text="@string/Toman"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_price_shop_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_discount_shop_recycler"
+                android:layout_marginTop="@dimen/small_margin_5dp"
+                android:layout_toEndOf="@id/toman2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_font_size_14sp"
+                tools:text="2,100,000" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toman2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toman"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                android:layout_marginTop="@dimen/small_margin_5dp"
+                android:text="@string/Toman"
+                android:textColor="@color/black" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/product_description_detail_Activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_price_shop_recycler"
+                android:layout_margin="@dimen/standard_margin_8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_font_size_14sp"
+                tools:text="@string/Lorem_Ipsum_farsi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_description_detail_Activity"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/standard_margin_8dp"
+                android:text="@string/Comments"
+                android:textSize="@dimen/standard_font_size_14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/add_comment_detail_Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_description_detail_Activity"
+                android:layout_margin="@dimen/standard_margin_8dp"
+                android:text="@string/AddComment"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/standard_font_size_14sp" />
+
+            <!--  <RelativeLayout
+                  android:layout_below="@id/add_comment_detail_Activity"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_margin="@dimen/standard_margin_8dp">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_recycler_detail_Activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_comment_detail_Activity"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:layout_marginTop="@dimen/standard_margin_8dp"
+                android:layout_marginBottom="70dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_comment" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_no_comment_detail_Activity"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/ic_no_comment"
+                android:layout_below="@id/add_comment_detail_Activity"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_no_comment_detail_Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_comment_yet"
+                android:textSize="@dimen/medium_font_size_16sp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_no_comment_detail_Activity"
+                android:visibility="invisible"
+                android:layout_marginBottom="70dp"/>
+            <!--</RelativeLayout>
+    -->
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_to_card_detail_Activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/standard_margin_8dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        android:layout_marginBottom="@dimen/standard_margin_8dp"
+        android:background="@drawable/bg_add_to_card"
+        android:text="@string/AddToCard"
+        android:textColor="@color/white"
+        app:cornerRadius="15dp"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/medium_font_size_16sp" />
+
+
+</RelativeLayout>
