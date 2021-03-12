@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BoughtDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_buy_detail_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_buy_detail_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                android:layout_toStartOf="@id/image_back_buy_detail_activity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_font_size_16sp"
+                android:text="@string/buy_detail" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_back_buy_detail_activity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_buy_detail_activity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_buy_detail_activity" />
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progress_bar_buy_detail_activity"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        app:SpinKit_Color="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_buy_detail_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recycler_buy_detail_activity"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_buy_detail_activity"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

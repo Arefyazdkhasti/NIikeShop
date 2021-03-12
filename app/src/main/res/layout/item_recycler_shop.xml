@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/standard_margin_8dp"
     app:cardCornerRadius="@dimen/standard_margin_8dp"
-    android:background="@color/white">
+    android:background="@color/gray1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_font_size_16sp"
-            app:layout_constraintBottom_toTopOf="@+id/product_price_shop_recycler"
+            app:layout_constraintBottom_toTopOf="@+id/product_price_item_buy_detail"
             app:layout_constraintEnd_toStartOf="@+id/valueSelector_shop_recycler"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/product_price_shop_recycler"
+            android:id="@+id/product_price_item_buy_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -86,8 +86,8 @@
             android:layout_height="wrap_content"
             android:text="@string/Toman"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/product_price_shop_recycler"
-            app:layout_constraintEnd_toStartOf="@+id/product_price_shop_recycler"
+            app:layout_constraintBottom_toBottomOf="@+id/product_price_item_buy_detail"
+            app:layout_constraintEnd_toStartOf="@+id/product_price_item_buy_detail"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_goneMarginStart="40dp" />

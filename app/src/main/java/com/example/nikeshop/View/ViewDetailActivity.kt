@@ -17,7 +17,6 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codesgood.views.JustifiedTextView
-import com.example.nikeshop.Presenter.PresenterMainActivity
 import com.example.nikeshop.R
 import com.example.nikeshop.View.CoustomView.CustomTextView
 import com.example.nikeshop.`interface`.Utility
@@ -79,7 +78,7 @@ class ViewDetailActivity(
 
         txtName = mainView.product_name_detail_Activity
         txtDesc = mainView.product_description_detail_Activity
-        txtPrice = mainView.product_price_shop_recycler
+        txtPrice = mainView.product_price_detail_Activity
         txtDiscount = mainView.product_discount_shop_recycler
         txtToman = mainView.toman
         imagePrev = mainView.product_image_detail_Activity
@@ -131,8 +130,13 @@ class ViewDetailActivity(
                         val data = response.body()
 
                         if (data != null) {
-                            showCustomToastSuccess(data.error_msg)
-                            setFavourite()
+                            if(data.error_msg == "به علاقه مندی ها افزوده شد") {
+                                showCustomToastSuccess(data.error_msg)
+                                setFavourite()
+                            }else if(data.error_msg == "از لیست علاقه مندی ها حذف شد"){
+                                showCustomToastWarning(data.error_msg)
+                                notFavourite()
+                            }
                         } else
                             Log.i("Error_Add_to_card", "data for adding to favourite is null")
                     }
@@ -202,6 +206,10 @@ class ViewDetailActivity(
         toast.show()
     }
 
+    fun showCustomToastWarning(text:String){
+        val toast:MDToast = MDToast.makeText(context,text,MDToast.LENGTH_SHORT,MDToast.TYPE_WARNING)
+        toast.show()
+    }
     fun showSnackBar(title: String) {
         progress.visibility = View.INVISIBLE
 

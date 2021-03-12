@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity(),Utility {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        checkLogin()
 
         val view = ViewLoginActivity(this,this)
         val model = ModelLoginActivity(this)
@@ -49,11 +48,5 @@ class LoginActivity : AppCompatActivity(),Utility {
         presenter.onCreate()
     }
 
-    private fun checkLogin() {
-        val pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE)
 
-        if (pref.getBoolean(IS_LOGGED_IN, false))
-            startActivity<MainActivity>()
-
-    }
 }

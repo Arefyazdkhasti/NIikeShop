@@ -29,17 +29,19 @@ class ModelFavouriteActivity(private val context: Context? = null) : KoinCompone
                     val data = response.body()
 
                     if (data != null) {
-                        countryPresenterListener.onResponse(data)
-                        countryPresenterListener.onEmptyResponse(false)
+                        if (data.isNotEmpty()) {
+                            countryPresenterListener.onResponse(data)
+                            countryPresenterListener.onEmptyResponse(false)
 
-                    } else {
-                        countryPresenterListener.onFailure("سبد خرید شما خالی است")
-                        countryPresenterListener.onEmptyResponse(true)
+                        } else {
+                            countryPresenterListener.onFailure("لیست علاقه مندی های شما خالی است")
+                            countryPresenterListener.onEmptyResponse(true)
+                        }
                     }
                 }
 
                 override fun onFailure(call: Call<List<DataProduct>>, t: Throwable) {
-                    countryPresenterListener.onFailure("سبد خرید شما خالی است")
+                    countryPresenterListener.onFailure("لیست علاقه مندی های شما خالی است")
                     countryPresenterListener.onEmptyResponse(true)
                 }
 

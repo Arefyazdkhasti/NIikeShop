@@ -13,8 +13,8 @@ class ValueSelector(
     attrs: AttributeSet
 ) : FrameLayout(contextInstance,attrs) {
 
-    private val btnMinus:AppCompatImageView
-    private val btnPlus:AppCompatImageView
+    val btnMinus:AppCompatImageView
+    val btnPlus:AppCompatImageView
     private val valueNumber:AppCompatTextView
 
     private val minValue:Int
@@ -67,14 +67,14 @@ class ValueSelector(
         }
     }
 
-    private fun decrementValue() {
+    fun decrementValue() {
         val value = Integer.valueOf(valueNumber.text.toString())
         if (value -1 != 0) {
             setValue(value - 1)
         }
     }
 
-    private fun incrementValue() {
+    fun incrementValue() {
         val value = Integer.valueOf(valueNumber.text.toString())
         setValue(value + 1)
     }

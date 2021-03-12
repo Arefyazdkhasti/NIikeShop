@@ -32,7 +32,6 @@
     <string name="send_comment">ثبت نظر</string>
     <string name="comment_content">متن </string>
     <string name="your_comment">نظرات شما</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_comment_from_you">تا کنون نظری ثبت نکرده اید!</string>
     <string name="no_comment_yet">نا کنون نظری برای این محصول ثبت نشده است</string>
@@ -42,4 +41,13 @@
     <string name="receiverAndPayment">انتخاب تحویل گیرنده و شیوه پرداخت</string>
     <string name="end_your_shop">نهایی کردن خرید</string>
     <string name="search">جست و جو</string>
+    <string name="your_previously_bought">خرید های شما</string>
+    <string name="internet_pay">پرداخت اینترنتی</string>
+    <string name="home_pay">پرداخت در محل</string>
+    <string name="your_bought">خرید های شما</string>
+    <string name="code">کدسفارش</string>
+    <string name="no_bought_yet">تا به حال خرید نکرده اید</string>
+    <string name="add_comment_on_this_product">ثبت نظر در مورد این کالا</string>
+    <string name="Add_comment_for_this">ثبت دیدگاه برای این کالا</string>
+    <string name="Send_data">ثبت اطلاعات</string>
 </resources>

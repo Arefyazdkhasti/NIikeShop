@@ -11,16 +11,20 @@ import com.example.nikeshop.Presenter.PresenterShoppingCartFragment
 import com.example.nikeshop.R
 import com.example.nikeshop.activities.ReceiverActivity
 import com.example.nikeshop.adapter.RecyclerShopAdapter
-import com.example.nikeshop.dataClass.DataProduct
+import com.example.nikeshop.dataClass.DataCart
 import kotlinx.android.synthetic.main.fragment_shoppping_cart.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.toast
-import org.koin.android.ext.android.inject
 
 
 class ShoppingCartFragment : Fragment() {
 
     private lateinit var presenter: PresenterShoppingCartFragment
+
+    companion object{
+        const val KEY_TOTAL_PRICE="total"
+        const val KEY_FINAL_PRICE="final"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,13 +45,15 @@ class ShoppingCartFragment : Fragment() {
         presenter = PresenterShoppingCartFragment(this, model)
         presenter.onCreate()
 
-        onClick()
 
     }
 
-    fun onClick() {
+     fun onPayClick(total: Int, final: Int) {
         btn_pay_shop_fragment.setOnClickListener {
-            context?.startActivity<ReceiverActivity>()
+            context?.startActivity<ReceiverActivity>(
+                KEY_TOTAL_PRICE to total,
+                KEY_FINAL_PRICE to final
+            )
         }
     }
 
@@ -55,7 +61,7 @@ class ShoppingCartFragment : Fragment() {
         toast(text)
     }
 
-    fun setUpRecycler(data: List<DataProduct>, presenter: PresenterShoppingCartFragment) {
+    fun setUpRecycler(data: List<DataCart>, presenter: PresenterShoppingCartFragment) {
         val adapter = RecyclerShopAdapter(activity?.applicationContext, presenter, data)
         recyclerView_shop_fragment.adapter = adapter
     }

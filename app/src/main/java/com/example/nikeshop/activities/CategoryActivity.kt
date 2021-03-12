@@ -1,14 +1,16 @@
 package com.example.nikeshop.activities
 
+import android.app.SearchManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.SearchView
 import com.example.nikeshop.Model.ModelCategoryActivity
 import com.example.nikeshop.Presenter.PresenterCategoryActivity
 import com.example.nikeshop.R
 import com.example.nikeshop.View.ViewCategoryActivity
 import com.example.nikeshop.`interface`.Utility
-import org.koin.android.ext.android.inject
 
 
 class CategoryActivity : AppCompatActivity(),Utility {
@@ -29,7 +31,6 @@ class CategoryActivity : AppCompatActivity(),Utility {
 
 
     }
-
 
     override fun onFinished() {
         finish()

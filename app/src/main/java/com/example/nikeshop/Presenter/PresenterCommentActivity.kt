@@ -20,7 +20,8 @@ class PresenterCommentActivity(
     private fun setUpTabLayout(){
         view.setUpTabLayout(
             model.getAdapter(),
-            model.getObjectAccepted(),
+            model.getObjectAccepted()
+            //model.getObjectWaiting()
         )
     }
     override fun onDestroy() {

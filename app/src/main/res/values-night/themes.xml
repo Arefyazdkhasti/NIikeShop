@@ -13,11 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:textViewStyle">@style/NikeShopTextViewStyle</item>
+        <item name="android:searchViewStyle">@style/NikeShopSearchStyle</item>
 
     </style>
 
     <style name="NikeShopTextViewStyle" parent="android:Widget.TextView">
         <item name="fontFamily">@font/iranian_sans</item>
+    </style>
+
+    <style name="NikeShopSearchStyle" parent="android:Widget.Material.SearchView">
+        <item name="title">@string/search</item>
+        <item name="endIconDrawable">@drawable/ic_close</item>
+        <item name="showAsAction">collapseActionView|ifRoom</item>
     </style>
 
 </resources>

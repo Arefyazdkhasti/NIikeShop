@@ -45,7 +45,7 @@ class ModelDetailActivity(private val activity: Activity) : KoinComponent {
                             countryPresenterListener.onResponse(data)
                             countryPresenterListener.onEmptyResponse(false)
                         } else {
-                            countryPresenterListener.onFailure("comment data is null")
+                            //countryPresenterListener.onFailure("comment data is null")
                             countryPresenterListener.onEmptyResponse(true)
                         }
                     }else{

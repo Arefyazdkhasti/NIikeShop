@@ -11,6 +11,7 @@ import com.example.nikeshop.adapter.ViewPagerAdapter
 import com.example.nikeshop.fragments.AcceptedCommentFragment
 import com.example.nikeshop.fragments.LoginFragment
 import com.example.nikeshop.fragments.RegisterFragment
+import com.example.nikeshop.fragments.WaitingCommentFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_comment.view.*
 
@@ -41,10 +42,10 @@ class ViewCommentActivity(
     fun setUpTabLayout(
         adapter: ViewPagerAdapter,
         accepted: AcceptedCommentFragment
-        /*notAccepted: AcceptedCommentFragment*/
+        //waiting: WaitingCommentFragment
     ) {
         adapter.addFragment(accepted,"نظرات ثبت شده")
-        adapter.addFragment(Fragment(),"نظرات در صف بررسی")
+        adapter.addFragment(Fragment(),"کالاهای در انتظار نظر")
 
         viewPager.adapter=adapter
         tabLayout.setupWithViewPager(viewPager)

@@ -3,6 +3,7 @@ package com.example.nikeshop.Model
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nikeshop.activities.LoginActivity
+import com.example.nikeshop.dataClass.DataCart
 import com.example.nikeshop.dataClass.DataProduct
 import com.example.nikeshop.net.ApiService
 import com.example.nikeshop.net.CountryPresenterListener
@@ -19,17 +20,17 @@ class ModelShoppingCartFragment(private val context: Context? = null) : KoinComp
     private val apiService: ApiService by inject()
 
 
-    fun getEmail() = context?.getSharedPreferences(LoginActivity.LOGIN_PREF, Context.MODE_PRIVATE)
+    private fun getEmail() = context?.getSharedPreferences(LoginActivity.LOGIN_PREF, Context.MODE_PRIVATE)
         ?.getString(LoginActivity.USER_EMAIL, "default Email") ?: ""
 
     fun getShopProduct(
-        countryPresenterListener: CountryPresenterListener<List<DataProduct>>,
+        countryPresenterListener: CountryPresenterListener<List<DataCart>>,
     ) {
         apiService.getApi().showCart(getEmail())
-            .enqueue(object : Callback<List<DataProduct>> {
+            .enqueue(object : Callback<List<DataCart>> {
                 override fun onResponse(
-                    call: Call<List<DataProduct>>,
-                    response: Response<List<DataProduct>>
+                    call: Call<List<DataCart>>,
+                    response: Response<List<DataCart>>
                 ) {
                     val data = response.body()
 
@@ -42,11 +43,9 @@ class ModelShoppingCartFragment(private val context: Context? = null) : KoinComp
                     }
                 }
 
-                override fun onFailure(call: Call<List<DataProduct>>, t: Throwable) {
+                override fun onFailure(call: Call<List<DataCart>>, t: Throwable) {
                     countryPresenterListener.onFailure("سبد خرید شما خالی است")
                     countryPresenterListener.onEmptyResponse(true)
-
-
                 }
 
             })

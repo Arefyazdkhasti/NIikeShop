@@ -6,12 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.nikeshop.Presenter.PresenterAcceptedCommentFragment
 import com.example.nikeshop.R
-import com.example.nikeshop.adapter.RecyclerCommentAdapter
-import com.example.nikeshop.dataClass.DataComments
-import com.example.nikeshop.net.ApiService
+import com.example.nikeshop.adapter.RecyclerYourCommentAdapter
+import com.example.nikeshop.dataClass.DataYourComment
 import com.valdesekamdem.library.mdtoast.MDToast
 import kotlinx.android.synthetic.main.fragment_accepted_comment.*
 import org.jetbrains.anko.support.v4.toast
@@ -35,11 +33,11 @@ class AcceptedCommentFragment : Fragment() {
         presenter.onCreate()
     }
 
-    fun setUpRecycler(data: List<DataComments>) {
+    fun setUpRecycler(data: List<DataYourComment>) {
         recycler_accepted_comment_fragment.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        val adapter = RecyclerCommentAdapter(data)
+        val adapter = RecyclerYourCommentAdapter(data, context)
         recycler_accepted_comment_fragment.adapter = adapter
 
     }

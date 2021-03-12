@@ -9,4 +9,9 @@
     <declare-styleable name="ValueSelector">
         <attr name="value_number" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="CustomDetail">
+        <attr name="icon" format="reference"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
 </resources>

@@ -25,6 +25,22 @@
                 android:layout_height="45dp"
                 android:layout_margin="@dimen/small_margin_5dp"/>
 
+
+            <ss.com.bannerslider.Slider
+                android:id="@+id/banner_slider_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginStart="@dimen/standard_margin_8dp"
+                android:layout_marginEnd="@dimen/standard_margin_8dp"
+                app:slider_interval="5000"
+                app:slider_loopSlides="true"
+                app:slider_defaultBanner="1"
+                app:slider_animateIndicators="true"
+                app:slider_indicatorSize="12dp"
+                app:slider_selectedSlideIndicator="@drawable/selected_slide_indicator"
+                app:slider_unselectedSlideIndicator="@drawable/unselected_slide_indicator"
+                />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/banner_image_1_home_fragment"
                 android:layout_width="match_parent"
@@ -33,6 +49,7 @@
                 android:adjustViewBounds="true"
                 android:layout_margin="@dimen/standard_margin_8dp"
                 android:scaleType="fitXY"
+                android:visibility="gone"
                 />
 
             <com.example.nikeshop.View.CoustomView.ProductView
@@ -58,12 +75,23 @@
                 app:title="پرفروش ترین ها" />
         </LinearLayout>
 
-        <ProgressBar
+        <!--<ProgressBar
             android:id="@+id/progress_bar_home_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200dp"/>
+            android:layout_marginTop="200dp"/>-->
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progress_bar_home_fragment"
+            style="@style/SpinKitView.Wave"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/standard_margin_8dp"
+            app:SpinKit_Color="@color/blue"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            />
 
     </FrameLayout>
 

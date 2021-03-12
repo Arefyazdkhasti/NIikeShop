@@ -39,12 +39,11 @@
             android:id="@+id/item_comment_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_margin_8dp"
-            android:layout_marginTop="@dimen/extra_large_margin_16dp"
+            android:layout_marginStart="8dp"
             android:textSize="@dimen/small_font_size_12sp"
             app:layout_constraintBottom_toBottomOf="@+id/item_comment_title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_comment_title"
             tools:text="چهارشنبه 20 اسفند 99" />
 
         <com.codesgood.views.JustifiedTextView
@@ -59,6 +58,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_comment_author"
             tools:text="@string/Lorem_Ipsum_farsi" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

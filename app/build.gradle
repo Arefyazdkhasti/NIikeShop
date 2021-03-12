@@ -51,7 +51,7 @@ dependencies {
 
     // Test Libraries
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.fragment:fragment-ktx:1.2.4'
+    implementation 'androidx.fragment:fragment-ktx:1.3.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -89,4 +89,9 @@ dependencies {
     //custom toast
     implementation 'com.valdesekamdem.library:md-toast:0.9.0'
 
+    //loading bar library
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    //banner slider
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
 }

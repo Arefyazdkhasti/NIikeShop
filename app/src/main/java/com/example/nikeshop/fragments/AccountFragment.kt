@@ -11,6 +11,8 @@ import com.example.nikeshop.R
 import com.example.nikeshop.activities.CommentActivity
 import com.example.nikeshop.activities.FavouriteActivity
 import com.example.nikeshop.activities.QuestionActivity
+import com.example.nikeshop.activities.YourBoughtActivity
+import com.valdesekamdem.library.mdtoast.MDToast
 import kotlinx.android.synthetic.main.fragment_account.*
 import org.jetbrains.anko.startActivity
 
@@ -45,11 +47,19 @@ class AccountFragment : Fragment() {
         comment_layout_account_fragment.setOnClickListener {
             context?.startActivity<CommentActivity>()
         }
+        your_previously_bought_layout_account_fragment.setOnClickListener {
+            context?.startActivity<YourBoughtActivity>()
+        }
     }
 
     fun setUserData(name: String, email: String) {
         txt_name_account_fragment.text = name
         txt_email_account_fragment.text = email
+    }
+
+    fun showToast(text:String){
+        val toast = MDToast.makeText(context,text,MDToast.LENGTH_SHORT,MDToast.TYPE_INFO)
+        toast.show()
     }
 
     override fun onDestroy() {

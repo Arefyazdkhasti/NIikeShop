@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.nikeshop.activities.LoginActivity
 import com.example.nikeshop.dataClass.DataComments
 import com.example.nikeshop.dataClass.DataProduct
+import com.example.nikeshop.dataClass.DataYourComment
 import com.example.nikeshop.net.ApiService
 import com.example.nikeshop.net.CountryPresenterListener
 import org.koin.standalone.KoinComponent
@@ -23,14 +24,13 @@ class ModelAcceptedCommentFragment(private val context: Context? = null) : KoinC
             ?.getString(LoginActivity.USER_EMAIL, "default Email") ?: ""
 
     fun getData(
-        countryPresenterListener: CountryPresenterListener<List<DataComments>>,
+        countryPresenterListener: CountryPresenterListener<List<DataYourComment>>,
         status: Int
-    ) =
-        apiService.getApi().getUserComments(getEmail(), status)
-            .enqueue(object : Callback<List<DataComments>> {
+    ) = apiService.getApi().getUserComments(getEmail(), status)
+            .enqueue(object : Callback<List<DataYourComment>> {
                 override fun onResponse(
-                    call: Call<List<DataComments>>,
-                    response: Response<List<DataComments>>
+                    call: Call<List<DataYourComment>>,
+                    response: Response<List<DataYourComment>>
                 ) {
                     Log.i("EMAIL_COMMENT", getEmail())
 
@@ -47,7 +47,7 @@ class ModelAcceptedCommentFragment(private val context: Context? = null) : KoinC
                     }
                 }
 
-                override fun onFailure(call: Call<List<DataComments>>, t: Throwable) {
+                override fun onFailure(call: Call<List<DataYourComment>>, t: Throwable) {
                     countryPresenterListener.onFailure("نظرات تایید شده شما خالی است")
                     countryPresenterListener.onEmptyResponse(true)
                 }

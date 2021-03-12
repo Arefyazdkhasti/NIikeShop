@@ -7,7 +7,7 @@
     tools:context=".activities.FavouriteActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout_favourite_activity"
+        android:id="@+id/appBarLayout_your_bought_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,12 +50,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_favourite_activity"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_your_bought_activity"
         tools:itemCount="2"
         android:visibility="invisible"
         tools:listitem="@layout/item_product" />
 
-    <ProgressBar
+   <!-- <ProgressBar
         android:id="@+id/progressBar_favourite_activity"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
@@ -63,7 +63,43 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout_favourite_activity" />
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout_favourite_activity" />-->
 
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressBar_favourite_activity"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        app:SpinKit_Color="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout_your_bought_activity"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_no_fav_favourite_activity"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_favourite_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_no_fav_favourite_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="محصولی در علاقه مندی شما موجود نیست"
+        android:textColor="@color/navyBlue"
+        android:textSize="@dimen/standard_font_size_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_no_fav_favourite_activity"
+        app:layout_constraintStart_toStartOf="@+id/img_no_fav_favourite_activity"
+        app:layout_constraintTop_toBottomOf="@+id/img_no_fav_favourite_activity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

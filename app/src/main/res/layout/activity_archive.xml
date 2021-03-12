@@ -7,7 +7,7 @@
     tools:context=".activities.ArchiveActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout_favourite_activity"
+        android:id="@+id/appBarLayout_your_bought_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_favourite_activity"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_your_bought_activity"
         app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
@@ -64,6 +64,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView_archive_activity"
         app:layout_constraintEnd_toEndOf="@+id/recyclerView_archive_activity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout_favourite_activity" />
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout_your_bought_activity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.nikeshop.Presenter
 
 import com.example.nikeshop.Model.ModelShoppingCartFragment
 import com.example.nikeshop.`interface`.BaseLifeCycle
+import com.example.nikeshop.dataClass.DataCart
 import com.example.nikeshop.dataClass.DataProduct
 import com.example.nikeshop.fragments.ShoppingCartFragment
 import com.example.nikeshop.net.CountryPresenterListener
@@ -11,6 +12,9 @@ class PresenterShoppingCartFragment(
     private val model: ModelShoppingCartFragment,
 ) : BaseLifeCycle {
 
+    private var totalPrice = 0
+    private var priceWithDiscount = 0
+
     override fun onCreate() {
         getDataRecycler()
     }
@@ -18,13 +22,14 @@ class PresenterShoppingCartFragment(
     override fun onRefresh() {
         getDataRecycler()
     }
+
     private fun getDataRecycler() {
         view.showProgress()
 
-        model.getShopProduct(object : CountryPresenterListener<List<DataProduct>> {
-            override fun onResponse(data: List<DataProduct>) {
+        model.getShopProduct(object : CountryPresenterListener<List<DataCart>> {
+            override fun onResponse(data: List<DataCart>) {
 
-                view.setUpRecycler(data,this@PresenterShoppingCartFragment)
+                view.setUpRecycler(data, this@PresenterShoppingCartFragment)
                 setTotalPrice(data)
                 view.hideProgress()
                 view.hideEmptyCartImage()
@@ -47,22 +52,23 @@ class PresenterShoppingCartFragment(
         })
     }
 
-    private fun setTotalPrice(data: List<DataProduct>) {
-        var totalPrice = 0
-        var priceWithDiscount = 0
+
+    private fun setTotalPrice(data: List<DataCart>) {
 
         data.forEach {
 
-            totalPrice += Integer.valueOf(it.price)
+            val tp = Integer.valueOf(it.price) * it.count
+            totalPrice += tp
 
             priceWithDiscount += if (it.discount == 1)
-                Integer.valueOf(it.priceDiscount)
+                Integer.valueOf(it.priceDiscount) * it.count
             else
-                Integer.valueOf(it.price)
-
-            view.setPrices(totalPrice.toString(), priceWithDiscount.toString())
+                Integer.valueOf(it.price) * it.count
 
         }
+        view.setPrices(totalPrice.toString(), priceWithDiscount.toString())
+        view.onPayClick(totalPrice, priceWithDiscount)
+
     }
 
     override fun onDestroy() {}

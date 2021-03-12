@@ -5,7 +5,6 @@ import com.example.nikeshop.View.ViewCategoryActivity
 import com.example.nikeshop.`interface`.BaseLifeCycle
 import com.example.nikeshop.dataClass.DataProduct
 import com.example.nikeshop.net.CountryPresenterListener
-import kotlin.coroutines.coroutineContext
 
 class PresenterCategoryActivity(
     private val view: ViewCategoryActivity,
@@ -26,27 +25,7 @@ class PresenterCategoryActivity(
     private fun setDataRecyclers() {
         view.showProgress()
 
-        /*model.getDataNewProductsByID(object : CountryPresenterListener<List<DataProduct>> {
-            override fun onResponse(data: List<DataProduct>) {
-                view.setDataNewProducts(data)
-            }
 
-            override fun onFailure(error: String) {
-                view.showToast(error)
-            }
-
-        })
-
-        model.getDataTopSellingProductsByID(object :CountryPresenterListener<List<DataProduct>>{
-            override fun onResponse(data: List<DataProduct>) {
-                view.setDataTopSellingProducts(data)
-            }
-
-            override fun onFailure(error: String) {
-                view.showToast(error)
-            }
-
-        })*/
         model.getDataCategory(
             object : CountryPresenterListener<List<DataProduct>> {
                 override fun onResponse(data: List<DataProduct>) {
@@ -60,7 +39,9 @@ class PresenterCategoryActivity(
                 }
 
             },view.sortBy)
+
     }
+
 
 
     private fun setTitle() {
@@ -69,7 +50,7 @@ class PresenterCategoryActivity(
     }
 
     private fun onClickHandler() {
-        view.onBackClicked()
+        view.onClicked()
 
     }
 

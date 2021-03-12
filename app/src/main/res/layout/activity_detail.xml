@@ -53,12 +53,23 @@
         </RelativeLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ProgressBar
+    <!--<ProgressBar
         android:id="@+id/progress_detail_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        />-->
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progress_detail_activity"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        app:SpinKit_Color="@color/blue"
+        android:layout_centerInParent="true"
         />
+
 
     <ScrollView
         android:id="@+id/scroll_view_detail_Activity"
@@ -121,7 +132,7 @@
                 android:visibility="gone" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/product_price_shop_recycler"
+                android:id="@+id/product_price_detail_Activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/product_discount_shop_recycler"
@@ -145,7 +156,7 @@
                 android:id="@+id/product_description_detail_Activity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/product_price_shop_recycler"
+                android:layout_below="@id/product_price_detail_Activity"
                 android:layout_margin="@dimen/standard_margin_8dp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/standard_font_size_14sp"

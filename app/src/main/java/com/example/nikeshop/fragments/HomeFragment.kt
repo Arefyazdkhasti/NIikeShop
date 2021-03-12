@@ -8,15 +8,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nikeshop.Presenter.PresenterHomeFragment
 import com.example.nikeshop.R
+import com.example.nikeshop.adapter.MainSliderAdapter
 import com.example.nikeshop.adapter.RecyclerItemCategoryAdapter
 import com.example.nikeshop.dataClass.DataCategory
 import com.example.nikeshop.dataClass.DataImageUrl
 import com.example.nikeshop.dataClass.DataProduct
 import com.example.nikeshop.enumration.TypeGetProduct
+import com.example.nikeshop.utitlity.ImageLoadingService
 import com.example.nikeshop.utitlity.PicassoUtility
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
+import ss.com.bannerslider.Slider
+import ss.com.bannerslider.indicators.IndicatorShape
 
 
 class HomeFragment : Fragment() {
@@ -37,6 +41,7 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         category_recycler_home_fragment.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,true)
+
 
         presenter.onCreate()
 
@@ -69,6 +74,16 @@ class HomeFragment : Fragment() {
         picasso.setImage(data.image1,banner_image_1_home_fragment)
         picasso.setImage(data.image2,banner_image_2_home_fragment)
     }
+
+    fun setSlider(){
+        //TODO di inject
+        val adapter=MainSliderAdapter()
+        val imgLoader= ImageLoadingService()
+        Slider.init(imgLoader)
+        banner_slider_home_fragment.setAdapter(adapter)
+        banner_slider_home_fragment.setIndicatorStyle(IndicatorShape.ROUND_SQUARE);
+    }
+
     //endregion
 
     fun showToast(text:String){

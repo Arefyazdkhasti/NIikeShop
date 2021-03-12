@@ -15,6 +15,7 @@ val fragmentModules = module {
     single { LoginFragment() }
     single { RegisterFragment() }
     single { AcceptedCommentFragment() }
+    single { WaitingCommentFragment() }
 }
 
 val modelModules = module {
@@ -25,7 +26,7 @@ val modelModules = module {
     factory { ModelLoginFragment() }
     factory { ModelRegisterFragment() }
     factory { ModelAcceptedCommentFragment(get()) }
-    single { ModelReceiverActivity() }
+    factory { ModelWaitingCommentFragment(get()) }
 }
 
 val apiModules = module {
@@ -39,4 +40,5 @@ val presenterModules = module {
     factory { PresenterLoginFragment(get() as LoginFragment, get() as ModelLoginFragment)}
     factory { PresenterRegisterFragment(get() as RegisterFragment, get() as ModelRegisterFragment)}
     factory { PresenterAcceptedCommentFragment(get() as AcceptedCommentFragment,get() as ModelAcceptedCommentFragment) }
+    factory { PresenterWaitingCommentFragment(get() as WaitingCommentFragment,get() as ModelWaitingCommentFragment) }
 }

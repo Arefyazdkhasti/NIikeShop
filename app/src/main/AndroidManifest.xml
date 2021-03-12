@@ -13,17 +13,19 @@
         android:roundIcon="@drawable/nike_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.NikeShop">
-        <activity android:name=".activities.ReceiverActivity" />
-        <activity android:name=".activities.CommentActivity" />
+        <activity android:name=".activities.BoughtDetailActivity"></activity>
+        <activity
+            android:name=".activities.YourBoughtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ReceiverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CommentActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.LoginActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FavouriteActivity"
             android:screenOrientation="portrait" />
@@ -35,13 +37,19 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.CategoryActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ArchiveActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

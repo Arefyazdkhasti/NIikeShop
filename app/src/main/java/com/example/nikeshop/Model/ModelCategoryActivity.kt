@@ -16,7 +16,7 @@ class ModelCategoryActivity(private val activity: Activity) : KoinComponent {
 
     private val apiService: ApiService by inject()
 
-    private fun getIdAsIntent():Int =
+    private fun getIdAsIntent(): Int =
         activity.intent.getIntExtra(RecyclerItemCategoryAdapter.KET_CATEGORY_ID, 0)
 
     fun getTitleAsIntent() =
@@ -70,19 +70,46 @@ class ModelCategoryActivity(private val activity: Activity) : KoinComponent {
             })
     }*/
 
-    fun getDataCategory(countryPresenterListener: CountryPresenterListener<List<DataProduct>>,sortBy:String) =
+    fun getDataCategory(
+        countryPresenterListener: CountryPresenterListener<List<DataProduct>>,
+        sortBy: String
+    ) =
         apiService.getApi().getDataForCategory(sortBy)
-            .enqueue(object :Callback<List<DataProduct>>{
+            .enqueue(object : Callback<List<DataProduct>> {
                 override fun onResponse(
                     call: Call<List<DataProduct>>,
                     response: Response<List<DataProduct>>
                 ) {
-                    val data =response.body()
+                    val data = response.body()
 
-                    if (data!= null)
+                    if (data != null)
                         countryPresenterListener.onResponse(data)
                     else
-                        countryPresenterListener.onFailure("داده ها خالی است !")
+                        countryPresenterListener.onFailure("خطا در دریافت اطلاعات")
+                }
+
+                override fun onFailure(call: Call<List<DataProduct>>, t: Throwable) {
+                    countryPresenterListener.onFailure(t.message.toString())
+                }
+
+            })
+
+    fun getDataSearch(
+        countryPresenterListener: CountryPresenterListener<List<DataProduct>>,
+        string: String
+    ) =
+        apiService.getApi().search(string,"")
+            .enqueue(object : Callback<List<DataProduct>> {
+                override fun onResponse(
+                    call: Call<List<DataProduct>>,
+                    response: Response<List<DataProduct>>
+                ) {
+                    val data = response.body()
+
+                    if (data != null)
+                        countryPresenterListener.onResponse(data)
+                    else
+                        countryPresenterListener.onFailure("خطا در دریافت اطلاعات")
                 }
 
                 override fun onFailure(call: Call<List<DataProduct>>, t: Throwable) {

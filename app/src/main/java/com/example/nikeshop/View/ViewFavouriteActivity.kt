@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nikeshop.R
@@ -25,12 +26,18 @@ class ViewFavouriteActivity(
     private val progress:ProgressBar
     private val recycler:RecyclerView
 
+    private val imgNoFav:AppCompatImageView
+    private val txtNoFav:AppCompatTextView
+
     init {
         val mainView= inflate(context, R.layout.activity_favourite,this)
 
         imgBack=mainView.image_back_favourite_activity
         progress=mainView.progressBar_favourite_activity
         recycler=mainView.recyclerView_favourite_activity
+
+        imgNoFav=mainView.img_no_fav_favourite_activity
+        txtNoFav=mainView.txt_no_fav_favourite_activity
     }
 
     fun initRecycler(data:List<DataProduct>){
@@ -43,9 +50,19 @@ class ViewFavouriteActivity(
         context.toast(text)
     }
 
+    fun showNoFav(){
+        imgNoFav.visibility= VISIBLE
+        txtNoFav.visibility= VISIBLE
+    }
+
+    fun hideNoFav(){
+        imgNoFav.visibility= INVISIBLE
+        txtNoFav.visibility= INVISIBLE
+    }
     fun showProgress(){
         progress.visibility=VISIBLE
         recycler.visibility= INVISIBLE
+
     }
 
     fun hideProgress(){

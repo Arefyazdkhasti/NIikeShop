@@ -28,6 +28,15 @@ class PresenterFavouriteActivity(
                 view.hideProgress()
             }
 
+            override fun onEmptyResponse(isEmpty: Boolean) {
+                view.hideProgress()
+                if (isEmpty) {
+                    view.showNoFav()
+                }else{
+                    view.hideNoFav()
+                }
+            }
+
         })
     }
 

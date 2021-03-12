@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/favourite_layout_account_fragment"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_detail_view"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_width="35dp"
+        android:src="@drawable/ic_favorite_black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_detail_view"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@id/icon_detail_view"
+        android:layout_width="wrap_content"
+        android:text="@string/favourites"
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_font_size_14sp"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_centerVertical="true"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/small_margin_5dp"
+        android:layout_width="30dp"
+        android:rotation="90"
+        app:srcCompat="@drawable/ic_more" />
+
+</RelativeLayout>

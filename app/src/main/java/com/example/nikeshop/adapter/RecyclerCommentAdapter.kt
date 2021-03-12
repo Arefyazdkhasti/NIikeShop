@@ -1,15 +1,19 @@
 package com.example.nikeshop.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nikeshop.R
 import com.example.nikeshop.dataClass.DataComments
+import com.example.nikeshop.net.ApiService
 import kotlinx.android.synthetic.main.item_comment.view.*
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 
 class RecyclerCommentAdapter(private val data: List<DataComments>) :
-    RecyclerView.Adapter<RecyclerCommentAdapter.CommentsViewHolder>() {
+    RecyclerView.Adapter<RecyclerCommentAdapter.CommentsViewHolder>(){
 
     inner class CommentsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -23,7 +27,9 @@ class RecyclerCommentAdapter(private val data: List<DataComments>) :
             txtAuthor.text = data.author
             txtTime.text = data.created_at
             txtText.text = data.content
+
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentsViewHolder =

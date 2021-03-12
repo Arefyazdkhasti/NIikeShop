@@ -29,7 +29,6 @@ class RecyclerItemProductAdapter(
 
     companion object {
         const val KEY_ID = "id"
-        //const val KEY_TYPE = "type"
         const val KEY_NAME = "name"
     }
 

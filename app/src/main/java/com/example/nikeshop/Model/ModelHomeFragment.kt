@@ -6,7 +6,6 @@ import com.example.nikeshop.dataClass.DataImageUrl
 import com.example.nikeshop.dataClass.DataProduct
 import com.example.nikeshop.net.ApiService
 import com.example.nikeshop.net.CountryPresenterListener
-import com.example.nikeshop.test.DataTest
 import org.koin.standalone.KoinComponent
 import org.koin.standalone.inject
 import retrofit2.Call
@@ -90,7 +89,7 @@ class ModelHomeFragment :KoinComponent{
 
     fun getImageUrlForBanner(mListener: CountryPresenterListener<DataImageUrl>) {
 
-        apiService.getApi().getImagesUrlForSlider()
+        apiService.getApi().getImagesUrlForBanners()
             .enqueue(object : Callback<DataImageUrl> {
                 override fun onResponse(
                     call: Call<DataImageUrl>,

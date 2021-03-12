@@ -13,7 +13,9 @@ class PresenterMainActivity(
     private val model: ModelMainActivity
 ) : BaseLifeCycle {
 
-
+    companion object{
+        var cartSize=0
+    }
     override fun onCreate() {
         setUpView()
         setOnBottomNavigationClicked()
@@ -21,6 +23,10 @@ class PresenterMainActivity(
         setCartBadge()
     }
 
+    override fun onRefresh() {
+        super.onRefresh()
+        setCartBadge()
+    }
 
     private fun setUpView() {
         view.setUpView(model.getItemChecked(), model.getMainFragment())
@@ -33,17 +39,19 @@ class PresenterMainActivity(
     private fun setCartBadge() {
         model.getCartSize(object : CountryPresenterListener<DataResponse> {
             override fun onResponse(data: DataResponse) {
-                view.addBadge(Integer.valueOf(data.error_msg))
-                Log.i("TEST", data.error_msg)
+
+
+                Log.i("BADGE", data.error_msg)
                 if (data.error_msg == "0") {
                     view.removeBadge()
                 } else {
                     view.addBadge(Integer.valueOf(data.error_msg))
+                    cartSize=Integer.valueOf(data.error_msg)
                 }
             }
 
             override fun onFailure(error: String) {
-
+                view.removeBadge()
             }
 
         })

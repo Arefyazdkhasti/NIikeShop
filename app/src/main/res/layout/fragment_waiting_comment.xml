@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AcceptedCommentFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_share_waiting_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نظرتان درباره کالاهایی که خریده اید چیست ؟\nآنها را با بقیه به اشتراک بگذارید!"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/medium_font_size_16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/extra_large_margin_16dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        tools:ignore="HardcodedText" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_waiting_comment_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_share_waiting_fragment"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        />
+
+    <!--<ProgressBar
+        android:id="@+id/progress_accepted_comment_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>-->
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progress_waiting_comment_fragment"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        app:SpinKit_Color="@color/blue"
+        android:layout_centerInParent="true"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_no_comment_waiting_comment_fragment"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/ic_no_comment"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_no_comment_waiting_comment_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_bought_yet"
+        android:textSize="@dimen/medium_font_size_16sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_no_comment_waiting_comment_fragment"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

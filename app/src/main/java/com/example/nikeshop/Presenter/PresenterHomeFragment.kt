@@ -68,6 +68,8 @@ class PresenterHomeFragment(
 
         })
 
+        view.setSlider()
+
     }
 
 

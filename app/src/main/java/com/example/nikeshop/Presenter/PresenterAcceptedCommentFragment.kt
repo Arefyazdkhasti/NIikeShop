@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.nikeshop.Model.ModelAcceptedCommentFragment
 import com.example.nikeshop.`interface`.BaseLifeCycle
 import com.example.nikeshop.dataClass.DataComments
+import com.example.nikeshop.dataClass.DataYourComment
 import com.example.nikeshop.fragments.AcceptedCommentFragment
 import com.example.nikeshop.net.CountryPresenterListener
 
@@ -17,8 +18,8 @@ class PresenterAcceptedCommentFragment(
 
     private fun setUpRecycler(){
         view.showProgress()
-        model.getData(object :CountryPresenterListener<List<DataComments>>{
-            override fun onResponse(data: List<DataComments>) {
+        model.getData(object :CountryPresenterListener<List<DataYourComment>>{
+            override fun onResponse(data: List<DataYourComment>) {
                 view.setUpRecycler(data)
                 view.hideProgress()
             }
@@ -36,7 +37,6 @@ class PresenterAcceptedCommentFragment(
                     view.hideNoComment()
                 }
             }
-
         },1)
     }
 

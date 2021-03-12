@@ -44,7 +44,21 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField2"
         />
 
-    <ProgressBar
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressBar_login_fragment"
+        style="@style/SpinKitView.Small.Wave"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="@dimen/standard_margin_8dp"
+        app:SpinKit_Color="@color/blue"
+        android:visibility="invisible"
+        android:elevation="@dimen/large_font_size_20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_login_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login_fragment"
+        app:layout_constraintTop_toTopOf="@+id/btn_login_fragment"
+        />
+
+    <!--<ProgressBar
         android:id="@+id/progressBar_login_fragment"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
@@ -53,9 +67,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -83,7 +97,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText_email_login_fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

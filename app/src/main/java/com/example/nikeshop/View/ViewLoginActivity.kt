@@ -26,7 +26,7 @@ class ViewLoginActivity(contextInstance: Context, private val utility: Utility) 
     init {
         val mainView = inflate(context, R.layout.activity_login, this)
 
-        tabLayout = mainView.tab_Layout_login_activity
+        tabLayout = mainView.findViewById(R.id.tab_Layout_login_activity)
         viewPager = mainView.viewPager_login_activity
         root = mainView.root_login_activity
     }
@@ -38,7 +38,7 @@ class ViewLoginActivity(contextInstance: Context, private val utility: Utility) 
     fun checkInternet(netInfo: Boolean) {
         if (netInfo) {
 
-            tab_Layout_login_activity.visibility = VISIBLE
+            tabLayout.visibility = VISIBLE
             viewPager.visibility = VISIBLE
 
         } else showSnackBar()
@@ -68,7 +68,7 @@ class ViewLoginActivity(contextInstance: Context, private val utility: Utility) 
         adapter.addFragment(register, "ثبت نام")
 
         viewPager.adapter = adapter
-        tab_Layout_login_activity.setupWithViewPager(viewPager)
+        tabLayout.setupWithViewPager(viewPager)
     }
 
 

@@ -44,6 +44,7 @@ class ModelMainActivity(private val context: Context) : KoinComponent {
     private fun getEmail() = context.getSharedPreferences(LoginActivity.LOGIN_PREF, Context.MODE_PRIVATE)
         .getString(LoginActivity.USER_EMAIL, "default Email") ?: ""
 
+    //TODO error in getting cart size
     fun getCartSize(countryPresenterListener: CountryPresenterListener<DataResponse>) =
         apiService.getApi().getCartSize(getEmail())
             .enqueue(object : Callback<DataResponse> {
@@ -60,6 +61,7 @@ class ModelMainActivity(private val context: Context) : KoinComponent {
                 }
 
                 override fun onFailure(call: Call<DataResponse>, t: Throwable) {
+                    println(t.message.toString())
                     countryPresenterListener.onFailure(t.message.toString())
                 }
 
