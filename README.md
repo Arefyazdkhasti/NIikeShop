@@ -18,8 +18,6 @@ Koin for dependency injection https://github.com/InsertKoinIO/koin
 
 demo: 
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png" width="15%"></img>   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/home.png" width="15%"></img>   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/productDetail.png" width="15%"></img>    <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/addCommentDialog.png" width="15%"></img>    <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/shoppingCart.png" width="15%"></img>    <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/account.png" width="15%"></img>   
-
 
 Login and Register
 
@@ -43,4 +41,16 @@ Account include all your comments , former bought and favourite items
 
 
 Server for this application is implemented with php and MySql 
+
+
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png" width="15%"></img> 
+
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/home.png" width="15%"></img>          <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>          <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>   
+
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/productDetail.png" width="15%"></img>         <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/addCommentDialog.png" width="15%"></img>    
+
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/shoppingCart.png" width="15%"></img>          <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/account.png" width="15%"></img>
+
+
+
 
