@@ -17,7 +17,8 @@ Anko https://github.com/Kotlin/anko
 Koin for dependency injection https://github.com/InsertKoinIO/koin
 
 Login and Register:
-![Screenshot](login.png)
+
+![Screenshot](Smaple/login.png)
 
 Home included serverbased banners , slider and ProductsView  which implemented with customView :
 
