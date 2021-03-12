@@ -42,13 +42,13 @@ Server for this application is implemented with php and MySql
 
 demo:
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png" width="15%"></img>         <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/home.png" width="15%"></img> 
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png" width="15%"></img>                  <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/home.png" width="13%"></img> 
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>          <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>   
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>                   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>   
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/productDetail.png" width="15%"></img>         <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/addCommentDialog.png" width="15%"></img>    
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/productDetail.png" width="15%"></img>                   <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/addCommentDialog.png" width="15%"></img>    
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/shoppingCart.png" width="15%"></img>          <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/account.png" width="15%"></img>
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/shoppingCart.png" width="15%"></img>                    <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/account.png" width="15%"></img>
 
 
 
