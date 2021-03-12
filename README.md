@@ -16,20 +16,20 @@ Anko https://github.com/Kotlin/anko
 
 Koin for dependency injection https://github.com/InsertKoinIO/koin
 
-Login and Register:
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png" width="15%"></img>
 
-![Screenshot](https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png)
+Login and Register
 
-Home included serverbased banners , slider and ProductsView  which implemented with customView :
+Home included serverbased banners , slider and ProductsView  which implemented with customView 
 
-Search and sort:
+Search and sort
 
-Ability to add product to shopping cart and set them as your favourite:
+Ability to add product to shopping cart and set them as your favourite
 
-Ability to add comment for each product:
+Ability to add comment for each product
 
-Shopping cart whit ability to delete and add number of each item :
+Shopping cart whit ability to delete and add number of each item 
 
-Account include all your comments , former bought and favourite items:
+Account include all your comments , former bought and favourite items
 
 Server for this application is implemented with php and MySql 
