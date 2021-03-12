@@ -27,9 +27,7 @@ Home included serverbased banners , slider and ProductsView  which implemented w
 
 Search and sort
 
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>
-
-<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>
+<img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/search.png" width="15%"></img>  <img src="https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/sort.png" width="15%"></img>
 
 
 Ability to add product to shopping cart and set them as your favourite
