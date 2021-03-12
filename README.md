@@ -18,7 +18,7 @@ Koin for dependency injection https://github.com/InsertKoinIO/koin
 
 Login and Register:
 
-![Screenshot](Smaple/login.png)
+![Screenshot](https://github.com/Arefyazdkhasti/NikeShop/blob/master/Sample/login.png)
 
 Home included serverbased banners , slider and ProductsView  which implemented with customView :
 
